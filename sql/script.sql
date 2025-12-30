@@ -12,6 +12,6 @@ CREATE TABLE clients (
 
 CREATE TABLE categories (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    nom VARCHAR(100) NOT NULL,
+    nom VARCHAR(100) NOT NULL
     description TEXT
 );
