@@ -50,3 +50,8 @@ CREATE TABLE avis (
     FOREIGN KEY (id_client) REFERENCES clients(id),
     FOREIGN KEY (id_vehicule) REFERENCES vehicules(id)
 );
+
+INSERT INTO categories (nom, description) VALUES
+('Voiture', 'Véhicules de tourisme'),
+('Moto', 'Deux roues motorisées'),
+('Utilitaire', 'Véhicules pour transport de marchandises');
