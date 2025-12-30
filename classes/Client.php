@@ -2,39 +2,21 @@
 class Client {
     private int $id;
     private string $nom;
-    private string $prenom;
     private string $email;
+    private string $motDePasseHash;
 
-    public function __construct(int $id, string $nom, string $prenom, string $email) {
+    public function __construct(int $id, string $nom, string $email, string $motDePasseHash) {
         $this->id = $id;
         $this->nom = $nom;
-        $this->prenom = $prenom;
         $this->email = $email;
+        $this->motDePasseHash = $motDePasseHash;
     }
 
-    public function getId(): int { 
-        return $this->id; 
-    }
+    public function getId(): int { return $this->id; }
+    public function getNom(): string { return $this->nom; }
+    public function getEmail(): string { return $this->email; }
 
-    public function getNom(): string {
-         return $this->nom;
-    }
-    public function getPrenom(): string {
-         return $this->prenom; 
-    }
-    public function getEmail(): string {
-         return $this->email;
-    }
-
-   
-    public function setNom(string $nom){ 
-        $this->nom = $nom; 
-    }
-    public function setPrenom(string $prenom){ 
-        $this->prenom = $prenom;
-     }
-    public function setEmail(string $email){ 
-        $this->email = $email; 
-    }
+    public function setNom(string $nom): void { $this->nom = $nom; }
+    public function setEmail(string $email): void { $this->email = $email; }
 }
 ?>
