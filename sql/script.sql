@@ -55,3 +55,9 @@ INSERT INTO categories (nom, description) VALUES
 ('Voiture', 'Véhicules de tourisme'),
 ('Moto', 'Deux roues motorisées'),
 ('Utilitaire', 'Véhicules pour transport de marchandises');
+
+INSERT INTO vehicules (modele, immatriculation, prix_jour, id_categorie, disponible) VALUES
+('Toyota Yaris', 'AA-123-BB', 300.00, 1, TRUE),
+('Dacia Duster', 'CC-456-DD', 450.00, 1, TRUE),
+('Yamaha MT-07', 'EE-789-FF', 200.00, 2, TRUE),
+('Renault Kangoo', 'GG-111-HH', 500.00, 3, FALSE);
