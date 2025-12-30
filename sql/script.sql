@@ -15,3 +15,14 @@ CREATE TABLE categories (
     nom VARCHAR(100) NOT NULL
     description TEXT
 );
+
+CREATE TABLE vehicules (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    modele VARCHAR(100) NOT NULL,
+    immatriculation VARCHAR(50) UNIQUE NOT NULL,
+    prix_jour DECIMAL(10,2) NOT NULL,
+    id_categorie INT NOT NULL,
+    disponible BOOLEAN DEFAULT TRUE,
+    FOREIGN KEY (id_categorie) REFERENCES categories(id)
+);
+
