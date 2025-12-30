@@ -39,3 +39,14 @@ CREATE TABLE reservations (
     FOREIGN KEY (id_vehicule) REFERENCES vehicules(id)
 );
 
+CREATE TABLE avis (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_client INT NOT NULL,
+    id_vehicule INT NOT NULL,
+    note INT CHECK (note BETWEEN 1 AND 5),
+    commentaire TEXT,
+    soft_deleted BOOLEAN DEFAULT FALSE,
+    date_avis DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (id_client) REFERENCES clients(id),
+    FOREIGN KEY (id_vehicule) REFERENCES vehicules(id)
+);
