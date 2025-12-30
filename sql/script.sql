@@ -26,3 +26,16 @@ CREATE TABLE vehicules (
     FOREIGN KEY (id_categorie) REFERENCES categories(id)
 );
 
+CREATE TABLE reservations (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_client INT NOT NULL,
+    id_vehicule INT NOT NULL,
+    date_debut DATE NOT NULL,
+    date_fin DATE NOT NULL,
+    lieu_depart VARCHAR(100),
+    lieu_retour VARCHAR(100),
+    statut VARCHAR(50),
+    FOREIGN KEY (id_client) REFERENCES clients(id),
+    FOREIGN KEY (id_vehicule) REFERENCES vehicules(id)
+);
+
