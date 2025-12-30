@@ -61,3 +61,5 @@ INSERT INTO vehicules (modele, immatriculation, prix_jour, id_categorie, disponi
 ('Dacia Duster', 'CC-456-DD', 450.00, 1, TRUE),
 ('Yamaha MT-07', 'EE-789-FF', 200.00, 2, TRUE),
 ('Renault Kangoo', 'GG-111-HH', 500.00, 3, FALSE);
+
+SELECT * FROM vehicules;
