@@ -1,5 +1,5 @@
 <?php
-class Client extends user {
+class Client {
     private int $id;
     private string $nom;
     private string $email;
@@ -10,10 +10,6 @@ class Client extends user {
         $this->nom = $nom;
         $this->email = $email;
         $this->motDePasseHash = $motDePasseHash;
-    }
-    public function __get($name)
-    {
-        return $this->$name;
     }
 
     public function getId(): int { return $this->id; }
